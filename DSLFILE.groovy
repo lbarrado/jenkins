@@ -1,9 +1,9 @@
 job('JOBDSL-002') {
 	description('Job DSL de ejemplo para el curso de Jenkins')
   	scm {
-      		git('https://github.com/macloujulian/jenkins.job.parametrizado.git', 'main') { node ->
-        		node / gitConfigName('macloujulian')
-        		node / gitConfigEmail('macloujulian@gmail.com')
+      		git('https://github.com/lbarrado/jenkins.git', 'main') { node ->
+        		node / gitConfigName('Luis Barrado')
+        		node / gitConfigEmail('ljbarrado@gmail.com')
       		}
     	} 
   	parameters {
@@ -18,7 +18,7 @@ job('JOBDSL-002') {
     		shell("bash jobscript.sh")
     	}
   	publishers {
-      		mailer('macloujulian@gmail.com', true, true)
+      		mailer('ljbarrado@gmail.com', true, true)
       		slackNotifier {
 		  notifyAborted(true)
 		  notifyEveryFailure(true)
