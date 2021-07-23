@@ -10,7 +10,7 @@ job('BASE DSL NODEJS') {
         scm('H/7 * * * *')
     }
     wrappers {
-        nodejs('nodejs')
+        nodejs('Nodejs')
     }
     steps {
         shell("npm install")
