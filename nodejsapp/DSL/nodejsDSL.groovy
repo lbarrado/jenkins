@@ -1,4 +1,4 @@
-job('BASE DSL NODEJS') {
+job('JOBNODEJS') {
     description('Node JS DSL para el curso de Jenkins')
     scm {
         git('https://github.com/lbarrado/jenkins.git', 'main') { node ->
