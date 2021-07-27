@@ -15,7 +15,7 @@ job('EJECUTA_JOBDOCKERNODE_001') {
     steps {
         dockerBuildAndPublish {
             repositoryName('ljbarrado/nodejs')
-            tag('${GIT_REVISION,length=7}')
+            tag('latest')
             registryCredentials('docker-hub')
             forcePull(false)
             createFingerprints(false)
